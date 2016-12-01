@@ -78,6 +78,21 @@
             filter: '.filter' /* .filter */
         }
     });
+
+    var imageNum = 1;
+    $('.logo').click(function() {
+        switch(imageNum){
+            case 1: 
+                $(".logo").attr('src',"img/profile2.png"); 
+                imageNum = 2; 
+                break;
+            case 2:
+                $(".logo").attr('src',"img/profile.png");
+                imageNum = 1;
+                break;
+        }
+    });
+    $('.logo').popover();
         
 })(jQuery); // End of use strict
 
