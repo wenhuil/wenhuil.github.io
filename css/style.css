@@ -198,14 +198,13 @@ header img {
   }
 }
 section {
-  padding: 180px 0;
+  padding: 10px 0;
 }
 section h2 {
   margin: 0;
   font-size: 3em;
 }
 section.success {
-  background: white;
   color: black;
 }
 @media (max-width: 767px) {
@@ -216,6 +215,71 @@ section.success {
     padding-top: 75px;
   }
 }
+
+.cd-main-content {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.cd-fixed-bg {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+}
+.cd-bg-1 {
+  background-image: url("../img/about1.png");
+  opacity: 0.4;
+}
+.cd-bg-3 {
+  background-image: url("../img/about3.png");
+  opacity: 0.4;
+}
+@media only screen and (min-width: 768px) {
+  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-fixed-bg {
+    background-attachment: fixed;
+  }
+  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+}
+
+.cd-scrolling-bg {
+  position: relative;
+  overflow:auto;
+  min-height: 400px;
+  width: 100%;
+  padding: 4em 0;
+  line-height: 1.6;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.cd-color-1 {
+  background-color: white;
+}
+@media only screen and (min-width: 768px) {
+  .cd-scrolling-bg {
+    padding: 8em 0;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 2;
+    font-weight: 300;
+  }
+}
+
 .portfolio-menu{
   display: inline;
   float: left;
@@ -340,15 +404,13 @@ form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
 }
 footer {
+  padding-top: 100px;
   color: white;
 }
 footer h3 {
   margin-bottom: 30px;
 }
-footer .footer-above {
-  padding-top: 50px;
-  background-color: #83AF9B;
-}
+
 footer .footer-col {
   margin-bottom: 50px;
 }
@@ -538,6 +600,9 @@ Waypoints
     animation-delay: 1s;
 }
 
+/* ==========================================================================
+Loading spinner
+========================================================================== */
 .no-js #loader { display: none;  }
 .js #loader { display: block; position: absolute; left: 100px; top: 0; }
 .se-pre-con {
@@ -548,4 +613,96 @@ Waypoints
   height: 100%;
   z-index: 9999;
   background: url(../img/preloader.gif) center no-repeat #fff;
+}
+/* ==========================================================================
+Social Buttons
+========================================================================== */
+.social-buttons {
+  padding: 100px 0;
+  height: 90px;
+  margin: auto;
+  font-size: 0;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.social-button {
+  display: inline-block;
+  background-color: #fff;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  margin: 0 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  opacity: .99;
+  border-radius: 28%;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+  -webkit-transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+  transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+.social-button:before {
+  content: '';
+  background-color: #000;
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  top: 90%;
+  left: -110%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+  transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+.social-button .fa {
+  font-size: 38px;
+  vertical-align: middle;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+  transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+.social-button.facebook:before {
+  background-color: #3B5998;
+}
+.social-button.facebook .fa {
+  color: #3B5998;
+}
+.social-button.twitter:before {
+  background-color: #3CF;
+}
+.social-button.twitter .fa {
+  color: #3CF;
+}
+.social-button.google:before {
+  background-color: #DC4A38;
+}
+.social-button.google .fa {
+  color: #DC4A38;
+}
+.social-button.dribbble:before {
+  background-color: #F26798;
+}
+.social-button.dribbble .fa {
+  color: #F26798;
+}
+.social-button.skype:before {
+  background-color: #00AFF0;
+}
+.social-button.skype .fa {
+  color: #00AFF0;
+}
+.social-button:focus:before, .social-button:hover:before {
+  top: -10%;
+  left: -10%;
+}
+.social-button:focus .fa, .social-button:hover .fa {
+  color: #fff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }

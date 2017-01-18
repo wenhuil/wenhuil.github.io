@@ -98,6 +98,7 @@
         }
     });
     $('.logo').popover();
+
         
 })(jQuery); // End of use strict
 
