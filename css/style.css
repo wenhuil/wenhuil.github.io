@@ -38,6 +38,8 @@ h6 {
 
 .img-centered {
   margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 header {
     display: table;
@@ -310,6 +312,9 @@ section.success {
   margin: 0 0 15px;
   right: 0;
 }
+#portfolio .porfolio-img {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 #portfolio .portfolio-item .portfolio-link {
   display: block;
   position: relative;
@@ -531,11 +536,22 @@ fieldset[disabled] .btn-success.active {
   border: none;
   min-height: 100%;
   padding: 100px 0;
-  text-align: center;
+  text-align: left;
 }
 .portfolio-modal .modal-content h2 {
   margin: 0;
-  font-size: 3em;
+  font-size: 2em;
+}
+.portfolio-modal .modal-content h4 {
+  margin: 0;
+  font-size: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.portfolio-modal .modal-content p {
+  margin: 0;
+  font-size: 1.2em;
+  line-height: 175%;
 }
 .portfolio-modal .modal-content img {
   margin-bottom: 30px;
