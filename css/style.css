@@ -598,6 +598,11 @@ fieldset[disabled] .btn-success.active {
   opacity: 0;
   display: none;
 }
+.portfolio-modal .close-button {
+  text-align: center;
+  margin: auto;
+  padding-top: 50px;
+}
 /* ==========================================================================
 Waypoints
 ========================================================================== */
