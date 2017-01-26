@@ -748,8 +748,15 @@ Social Buttons
 
 #carousel-example-generic {
   display: inline-block;
+  height: 1200px;
 }
-
+#carousel-example-generic1 {
+  display: inline-block;
+  height: 1100px;
+}
+#carousel-example-generic2 {
+  display: inline-block;
+}
 ul.thumbnails-carousel {
   padding: 5px 0 0 0;
   margin: 0;
