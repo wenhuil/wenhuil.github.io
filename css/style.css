@@ -206,6 +206,10 @@ section h2 {
   margin: 0;
   font-size: 3em;
 }
+section p {
+  margin: 0;
+  font-size: 1.5em;
+}
 section.success {
   color: black;
 }
